@@ -28,7 +28,7 @@ header {
   height: 100vh;
   background-image: linear-gradient(
       120deg,
-      rgba(132, 250, 175, 0.35) 0%,
+      rgba(107, 214, 146, 0.35) 0%,
       rgba(143, 210, 244, 0.35) 100%
     ),
     url(../assets/img/Fondo.jpg);
@@ -49,7 +49,7 @@ header {
 }
 .hamburguesa {
   position: fixed;
-  /* z-index: 10; */
+  z-index: 1;
   top: 30px;
   right: 40px;
   background-color: #fff;
@@ -73,6 +73,7 @@ header {
   transition: transform 0.3s ease-in-out;
   transform: translate(110%);
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 .spread {
   transform: translate(0);
@@ -131,13 +132,20 @@ header {
     rgba(143, 210, 244, 0.25) 100%
   );
   width: 20px;
-  height: 20px;
   margin-right: 5px;
+  height: 20px;
   color: #fff;
   border-radius: 50%;
   text-align: center;
   font-weight: 70%;
   line-height: 20px;
+}
+.profile-pic {
+  margin-top: -3em;
+  width: 100%;
+  height: 33em;
+  object-fit: cover;
+  border-radius: 50%;
 }
 .gallery {
   background: #f2f2f2;
@@ -175,8 +183,12 @@ header {
   transform: translate(0);
 }
 .agregar-imagen {
+  display: block !important;
+  padding-top: 15vh;
+  margin: auto;
   object-fit: cover;
-  width: 60%;
+
+  width: 70%;
   border-radius: 10px;
   transform: scale(0);
   transition: transform 0.3s 0.2s;
@@ -313,6 +325,10 @@ footer {
   .titulo {
     font-size: 45px;
   }
+  .subtitulo {
+    margin-bottom: 2em;
+  }
+
   .contenedor-servicio img {
     width: 80%;
     margin-bottom: 30px;
@@ -344,14 +360,26 @@ footer {
   .titulo {
     font-size: 45px;
   }
+  .profile-pic {
+    height: 35vh;
+  }
   .agregar-imagen {
+    padding-top: 30vh;
     width: 90%;
   }
   .img-galeria {
     width: 95%;
   }
+  .footer-content {
+    display: grid;
+    place-items: center;
+  }
+  .contact-us {
+    white-space: nowrap;
+  }
   .social-media {
     width: 100%;
+    padding-left: 7em;
     margin-top: 25px;
     margin-bottom: 25px;
   }
